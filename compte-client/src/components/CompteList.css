@@ -1,0 +1,187 @@
+/* CompteList.css */
+.compte-list-container {
+    padding: 2rem;
+}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f1f3f4;
+}
+
+.list-header h2 {
+    color: #2c3e50;
+    font-weight: 700;
+    margin: 0;
+}
+
+.stats {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.count-badge {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #7f8c8d;
+}
+
+.empty-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.compte-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.compte-table thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.compte-table th {
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+.compte-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #f1f3f4;
+    transition: all 0.3s ease;
+}
+
+.compte-table tbody tr:hover {
+    background: #f8f9fa;
+    transform: translateX(5px);
+}
+
+.compte-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.new-row {
+    background: #f0f9ff !important;
+    border-left: 4px solid #667eea;
+}
+
+.compte-id {
+    font-weight: 700;
+    color: #2c3e50;
+    font-family: 'Courier New', monospace;
+}
+
+.compte-type {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+}
+
+.type-icon {
+    font-size: 1.2rem;
+}
+
+.compte-solde {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.compte-solde.positive {
+    color: #27ae60;
+}
+
+.compte-solde.negative {
+    color: #e74c3c;
+}
+
+.compte-date {
+    color: #7f8c8d;
+}
+
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-badge.active {
+    background: #d5f4e6;
+    color: #27ae60;
+}
+
+.status-badge.overdraft {
+    background: #fdeaea;
+    color: #e74c3c;
+}
+
+/* Animations */
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .compte-table {
+        font-size: 0.9rem;
+    }
+
+    .compte-table th,
+    .compte-table td {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .list-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
